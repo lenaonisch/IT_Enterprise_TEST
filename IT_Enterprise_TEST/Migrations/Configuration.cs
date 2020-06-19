@@ -1,6 +1,6 @@
 ﻿namespace IT_Enterprise_TEST.Migrations
 {
-    using IT_Enterprise_TEST.Models;
+    using IT_Enterprise_TEST.Entities;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;

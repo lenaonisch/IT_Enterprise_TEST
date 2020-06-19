@@ -1,6 +1,6 @@
 ﻿namespace IT_Enterprise_TEST
 {
-    partial class Shipments
+    partial class ShipmentsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,63 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.ShipmentsDataSet = new System.Data.DataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.spipmentsDBDataSet = new IT_Enterprise_TEST.DataBase.SpipmentsDBDataSet();
-            this.spipmentsDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ShipmentsDataSet)).BeginInit();
+            this.btnGo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spipmentsDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spipmentsDBDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ShipmentsDataSet
-            // 
-            this.ShipmentsDataSet.DataSetName = "NewDataSet";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.spipmentsDBDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // spipmentsDBDataSet
+            // btnGo
             // 
-            this.spipmentsDBDataSet.DataSetName = "SpipmentsDBDataSet";
-            this.spipmentsDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnGo.Location = new System.Drawing.Point(713, 24);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(75, 23);
+            this.btnGo.TabIndex = 1;
+            this.btnGo.Text = "Go!";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
-            // spipmentsDBDataSetBindingSource
-            // 
-            this.spipmentsDBDataSetBindingSource.DataSource = this.spipmentsDBDataSet;
-            this.spipmentsDBDataSetBindingSource.Position = 0;
-            // 
-            // Shipments
+            // ShipmentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGo);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Shipments";
+            this.Name = "ShipmentsForm";
             this.Text = "Shipments";
-            ((System.ComponentModel.ISupportInitialize)(this.ShipmentsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spipmentsDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spipmentsDBDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Data.DataSet ShipmentsDataSet;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource spipmentsDBDataSetBindingSource;
-        private DataBase.SpipmentsDBDataSet spipmentsDBDataSet;
+        private System.Windows.Forms.Button btnGo;
     }
 }
 

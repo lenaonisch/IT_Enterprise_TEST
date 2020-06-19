@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IT_Enterprise_TEST.Models
+namespace IT_Enterprise_TEST.Entities
 {
     public class Shipment
     {

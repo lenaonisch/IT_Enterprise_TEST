@@ -1,4 +1,7 @@
-﻿using System;
+﻿using IT_Enterprise_TEST.Controllers;
+using IT_Enterprise_TEST.Models;
+using IT_Enterprise_TEST.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +19,12 @@ namespace IT_Enterprise_TEST
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Shipments());
+
+            ShipmentsForm view = new ShipmentsForm();
+            IModel model = new ShipmentModel();
+            IController controller = new ShipmentController(view, model);
+
+            Application.Run(view);
         }
     }
 }
