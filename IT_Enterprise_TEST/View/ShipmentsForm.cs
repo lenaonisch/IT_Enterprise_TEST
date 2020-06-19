@@ -15,7 +15,12 @@ namespace IT_Enterprise_TEST
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            _controller.GroupBy("Office");
+            string[] parameters = new string[] { };
+            if (checkBox1.Checked)
+            {
+                parameters = new string[] { "Organization" }; 
+            }
+            _controller.GroupBy(parameters);
         }
 
         public void ModelChanged(IModel sender, ModelEventArgs args)

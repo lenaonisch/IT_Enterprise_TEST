@@ -10,9 +10,9 @@ namespace IT_Enterprise_TEST.Models
 {
     public class ModelEventArgs
     {
-        public List<Shipment> Shipments { get; set; }
+        public List<object> Shipments { get; set; }
 
-        public ModelEventArgs(List<Shipment> shipments)
+        public ModelEventArgs(List<object> shipments)
         {
             Shipments = shipments;
         }

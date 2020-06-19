@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using IT_Enterprise_TEST.DataBase;
+using IT_Enterprise_TEST.Entities;
 using IT_Enterprise_TEST.View;
 
 namespace IT_Enterprise_TEST.Models
@@ -29,7 +31,18 @@ namespace IT_Enterprise_TEST.Models
 
         public void ChangeGrouping(params string[] parameters)
         {
-            var t = Context.Shipments.Select(s=>s).ToList();
+            List<object> t;
+            if (parameters.Length != 0)
+            {
+                t = (from shipment in Context.Shipments
+                         group shipment by shipment.Organization into g
+                         select new { Sum = g.Sum(k => k.Sum), Quantity = g.Sum(k => k.Quantity), Organization = g.Key })
+                        .ToList<object>();
+            }
+            else
+            {
+                t = Context.Shipments.Select(s => s).ToList<object>();
+            }    
             var args = new ModelEventArgs(t);
 
             changed?.Invoke(this, args);
