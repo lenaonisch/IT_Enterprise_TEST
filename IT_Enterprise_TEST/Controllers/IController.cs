@@ -8,6 +8,6 @@ namespace IT_Enterprise_TEST
 {
     public interface IController
     {
-        void GroupBy(params string[] props);
+        Task GroupBy(params string[] props);
     }
 }

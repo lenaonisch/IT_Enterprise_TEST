@@ -9,7 +9,7 @@ namespace IT_Enterprise_TEST.Entities
     public class Shipment
     {
         public int Id { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
         public string Organization { get; set; }
         public string City { get; set; }
         public string Country { get; set; }

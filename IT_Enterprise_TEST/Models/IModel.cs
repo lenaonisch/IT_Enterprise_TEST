@@ -19,7 +19,7 @@ namespace IT_Enterprise_TEST.Models
     }
     public interface IModel
     {
-        void ChangeGrouping(params string[] parameters);
+        Task ChangeGrouping(params string[] parameters);
         void Attach(IView view);
     }
 }

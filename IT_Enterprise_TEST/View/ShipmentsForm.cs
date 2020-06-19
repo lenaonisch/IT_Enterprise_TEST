@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using IT_Enterprise_TEST.Models;
 using IT_Enterprise_TEST.View;
@@ -15,12 +16,12 @@ namespace IT_Enterprise_TEST
 
         private void btnGo_Click(object sender, EventArgs e)
         {
-            string[] parameters = new string[] { };
-            if (checkBox1.Checked)
+            List<string> parameters = new List<string>();
+            foreach(var item in lbGroupingParameters.SelectedItems)
             {
-                parameters = new string[] { "Organization" }; 
+                parameters.Add(item.ToString());
             }
-            _controller.GroupBy(parameters);
+            _controller.GroupBy(parameters.ToArray());
         }
 
         public void ModelChanged(IModel sender, ModelEventArgs args)
