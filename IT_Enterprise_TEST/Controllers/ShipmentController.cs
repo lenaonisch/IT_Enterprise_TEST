@@ -21,6 +21,11 @@ namespace IT_Enterprise_TEST.Controllers
             _model.Attach(_view);
         }
 
+        public void AddSomething()
+        {
+            _model.AddSomething();
+        }
+
         public async Task GroupBy(params string[] props)
         {
             await _model.ChangeGrouping(props);

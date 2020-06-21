@@ -9,5 +9,6 @@ namespace IT_Enterprise_TEST
     public interface IController
     {
         Task GroupBy(params string[] props);
+        void AddSomething();
     }
 }

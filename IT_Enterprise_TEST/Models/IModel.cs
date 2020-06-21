@@ -21,5 +21,6 @@ namespace IT_Enterprise_TEST.Models
     {
         Task ChangeGrouping(params string[] parameters);
         void Attach(IView view);
+        void AddSomething();
     }
 }
