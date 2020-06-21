@@ -68,22 +68,5 @@ namespace IT_Enterprise_TEST.Models
         {
             changed += view.ModelChanged;
         }
-
-        public void AddSomething()
-        {
-            Context.Shipments.Add(
-                new Shipment()
-                {
-                    
-                    City = "Dnipro",
-                    Country = "Ukraine",
-                    Date = DateTime.Now,
-                    Manager = "manager",
-                    Organization = "org",
-                    Quantity = 1,
-                    Sum = 100
-                });
-            Context.SaveChanges();
-        }
     }
 }

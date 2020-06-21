@@ -36,10 +36,5 @@ namespace IT_Enterprise_TEST
         {
             _controller = controller;
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            _controller.AddSomething();
-        }
     }
 }
